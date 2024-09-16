@@ -2,26 +2,23 @@
 'RCET0265
 'Fall 2024
 'Fortune Cookie
-'https://github.com/ju8t1n203/VBAssignments/
+'https://github.com/ju8t1n203/FortuneCookie/tree/master
 
 Option Compare Text
 Option Explicit On
 Option Strict On
-Imports System
 
 Module FortuneCookie
 
     Sub Main()
         Dim userinput As String
-        Dim wisdom(1) As Integer
-
 
         Do
-            Dim rand As New Random(DateTime.Now.Millisecond)
+            Dim rand As New Random(DateTime.Now.Millisecond)                    'creates random number
             Dim randomNumber As Integer = rand.Next(1, 6)
             Console.Clear()
 
-            Select Case randomNumber
+            Select Case randomNumber                                            'a wisdom is selected based off the random number
                 Case 1
                     Console.WriteLine("""The best way To predict the future Is To create it."" - Peter Drucker")
                 Case 2
@@ -36,7 +33,7 @@ Module FortuneCookie
                     Console.WriteLine("ye broke it")
             End Select
 
-            Console.WriteLine()
+            Console.WriteLine()                                                 'user can quit the program or get another wisdom
             Console.WriteLine("Press enter for new fortune or press ""Q"" to quit.")
             userinput = Console.ReadLine()
 
